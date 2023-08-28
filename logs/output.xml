@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.5 on win32)" generated="20230828 15:08:34.928" rpa="false" schemaversion="4">
+<suite id="s1" name="Calculadora" source="C:\BRQ\artgmrs\robot-poc\tests\calculadora.robot">
+<kw name="Start Calculadora" type="SETUP">
+<doc>Sets up the application for quick launching through 'Launch Application' and starts the winappdriver</doc>
+<kw name="Driver Setup" library="ApplicationLibrary.DesktopLibrary">
+<doc>Starts the WinAppDriver.</doc>
+<status status="PASS" starttime="20230828 15:08:35.089" endtime="20230828 15:08:35.100"/>
+</kw>
+<kw name="Open Application" library="ApplicationLibrary.DesktopLibrary">
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=Windows</arg>
+<arg>deviceName=Windows</arg>
+<arg>app=${APP}</arg>
+<doc>Opens a new application to given Appium server.
+If your application has a splash screen please supply the window name of the final window that will appear.
+For the capabilities of appium server and Windows please check http://appium.io/docs/en/drivers/windows</doc>
+<status status="PASS" starttime="20230828 15:08:35.100" endtime="20230828 15:08:36.283"/>
+</kw>
+<kw name="Maximize Window" library="ApplicationLibrary.DesktopLibrary">
+<doc>Maximizes the current application window.</doc>
+<status status="PASS" starttime="20230828 15:08:36.283" endtime="20230828 15:08:36.292"/>
+</kw>
+<kw name="Quit Application" library="ApplicationLibrary.DesktopLibrary">
+<doc>Quit application. Application can be quit while Appium session is kept alive.
+This keyword can be used to close application during test case or between test cases.</doc>
+<status status="PASS" starttime="20230828 15:08:36.292" endtime="20230828 15:08:36.324"/>
+</kw>
+<status status="PASS" starttime="20230828 15:08:35.089" endtime="20230828 15:08:36.324"/>
+</kw>
+<test id="s1-t1" name="Esperar E Clicar No Botão Dois" line="23">
+<kw name="Launch Application" library="ApplicationLibrary.DesktopLibrary" type="SETUP">
+<doc>Launch application. Application can be launched while Appium session running.
+This keyword can be used to launch application during test case or between test cases.</doc>
+<status status="PASS" starttime="20230828 15:08:36.325" endtime="20230828 15:08:36.803"/>
+</kw>
+<kw name="Wait For And Click Element" library="ApplicationLibrary.DesktopLibrary">
+<arg>accessibility_id=num2Button</arg>
+<doc>Wait for and click the element identified by ``locator``.</doc>
+<msg timestamp="20230828 15:08:36.952" level="INFO">Clicking element 'accessibility_id=num2Button'.</msg>
+<status status="PASS" starttime="20230828 15:08:36.803" endtime="20230828 15:08:37.239"/>
+</kw>
+<kw name="Wait Until Element Contains" library="ApplicationLibrary.DesktopLibrary">
+<arg>accessibility_id=CalculatorResults</arg>
+<arg>2</arg>
+<doc>Waits until element specified with ``locator`` contains ``text``.</doc>
+<msg timestamp="20230828 15:08:37.351" level="INFO">Verifying element '&lt;appium.webdriver.webelement.WebElement (session="EF6436AB-3639-408D-92EF-06EF23D8ABBB", element="42.2295374.4.1")&gt;' contains text '2'.</msg>
+<status status="PASS" starttime="20230828 15:08:37.240" endtime="20230828 15:08:37.356"/>
+</kw>
+<kw name="Quit Application" library="ApplicationLibrary.DesktopLibrary" type="TEARDOWN">
+<doc>Quit application. Application can be quit while Appium session is kept alive.
+This keyword can be used to close application during test case or between test cases.</doc>
+<status status="PASS" starttime="20230828 15:08:37.356" endtime="20230828 15:08:37.374"/>
+</kw>
+<tag>Calculadora</tag>
+<status status="PASS" starttime="20230828 15:08:36.324" endtime="20230828 15:08:37.375"/>
+</test>
+<test id="s1-t2" name="Esperar E Somar 3 Mais 5" line="27">
+<kw name="Launch Application" library="ApplicationLibrary.DesktopLibrary" type="SETUP">
+<doc>Launch application. Application can be launched while Appium session running.
+This keyword can be used to launch application during test case or between test cases.</doc>
+<status status="PASS" starttime="20230828 15:08:37.375" endtime="20230828 15:08:37.811"/>
+</kw>
+<kw name="Wait For And Click Element" library="ApplicationLibrary.DesktopLibrary">
+<arg>accessibility_id=num3Button</arg>
+<doc>Wait for and click the element identified by ``locator``.</doc>
+<msg timestamp="20230828 15:08:37.971" level="INFO">Clicking element 'accessibility_id=num3Button'.</msg>
+<status status="PASS" starttime="20230828 15:08:37.811" endtime="20230828 15:08:38.213"/>
+</kw>
+<kw name="Wait For And Click Element" library="ApplicationLibrary.DesktopLibrary">
+<arg>accessibility_id=plusButton</arg>
+<doc>Wait for and click the element identified by ``locator``.</doc>
+<msg timestamp="20230828 15:08:38.324" level="INFO">Clicking element 'accessibility_id=plusButton'.</msg>
+<status status="PASS" starttime="20230828 15:08:38.213" endtime="20230828 15:08:38.551"/>
+</kw>
+<kw name="Wait For And Click Element" library="ApplicationLibrary.DesktopLibrary">
+<arg>accessibility_id=num5Button</arg>
+<doc>Wait for and click the element identified by ``locator``.</doc>
+<msg timestamp="20230828 15:08:38.667" level="INFO">Clicking element 'accessibility_id=num5Button'.</msg>
+<status status="PASS" starttime="20230828 15:08:38.552" endtime="20230828 15:08:38.895"/>
+</kw>
+<kw name="Wait For And Click Element" library="ApplicationLibrary.DesktopLibrary">
+<arg>accessibility_id=equalButton</arg>
+<doc>Wait for and click the element identified by ``locator``.</doc>
+<msg timestamp="20230828 15:08:38.997" level="INFO">Clicking element 'accessibility_id=equalButton'.</msg>
+<status status="PASS" starttime="20230828 15:08:38.896" endtime="20230828 15:08:39.222"/>
+</kw>
+<kw name="Wait Until Element Contains" library="ApplicationLibrary.DesktopLibrary">
+<arg>accessibility_id=CalculatorResults</arg>
+<arg>8</arg>
+<doc>Waits until element specified with ``locator`` contains ``text``.</doc>
+<msg timestamp="20230828 15:08:39.329" level="INFO">Verifying element '&lt;appium.webdriver.webelement.WebElement (session="EF6436AB-3639-408D-92EF-06EF23D8ABBB", element="42.789300.4.1")&gt;' contains text '8'.</msg>
+<status status="PASS" starttime="20230828 15:08:39.223" endtime="20230828 15:08:39.332"/>
+</kw>
+<kw name="Quit Application" library="ApplicationLibrary.DesktopLibrary" type="TEARDOWN">
+<doc>Quit application. Application can be quit while Appium session is kept alive.
+This keyword can be used to close application during test case or between test cases.</doc>
+<status status="PASS" starttime="20230828 15:08:39.332" endtime="20230828 15:08:39.349"/>
+</kw>
+<tag>Calculadora</tag>
+<status status="PASS" starttime="20230828 15:08:37.375" endtime="20230828 15:08:39.350"/>
+</test>
+<kw name="Close All Applications" library="ApplicationLibrary.DesktopLibrary" type="TEARDOWN">
+<doc>Closes all open applications.</doc>
+<status status="PASS" starttime="20230828 15:08:39.350" endtime="20230828 15:08:39.357"/>
+</kw>
+<doc>ApplicationLibrary Desktop Library Tests.</doc>
+<status status="PASS" starttime="20230828 15:08:34.930" endtime="20230828 15:08:39.357"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="2" fail="0" skip="0">Calculadora</stat>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Calculadora">Calculadora</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
